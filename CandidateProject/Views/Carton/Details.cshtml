@@ -1,0 +1,25 @@
+﻿@model CandidateProject.ViewModels.CartonViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+
+
+<div>
+    <h3>Carton @Html.DisplayFor(model => model.CartonNumber)</h3>
+    @if (TempData["content"] != null)
+    {
+        <p><b style="color:green;" >Contains @TempData["content"] equipment(s)</b></p>
+    }
+    <hr />
+    <dl class="dl-horizontal">
+ 
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
